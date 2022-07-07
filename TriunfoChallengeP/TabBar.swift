@@ -24,9 +24,16 @@ class TabBar: UITabBarController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
+        
+        //navController.navigationBar.barTintColor = UIColor(named: "secondBlack")
+        
         navController.navigationBar.barTintColor = .clear
+        navController.navigationBar.isTranslucent = true
+        
         navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+                
         navController.navigationBar.prefersLargeTitles = true
+        
         if navController.tabBarItem.title == "Featured"{
             rootViewController.navigationItem.title = title
             rootViewController.navigationItem.titleView = stackTitle
@@ -50,8 +57,15 @@ class TabBar: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = UIColor(named: "secondBlack")
+        
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = UIColor(named: "secondBlack")
+        
+        //UITabBar.appearance().barTintColor = UIColor(named: "secondBlack")
         tabBar.tintColor = .white
+        tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = appearance
+        
         setupVCs()
         
         let kit = teste()
