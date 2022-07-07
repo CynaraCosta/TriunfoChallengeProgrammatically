@@ -21,7 +21,7 @@ extension UIViewController{
         titleLudi = UILabel()
         titleLudi.textColor = .white
         titleLudi.text = "Ludi"
-        titleLudi.font = UIFont(name: "Oswald", size: 28)
+        titleLudi.font = UIFont(name: "Oswald-Medium", size: 24)
 
         
         let stackTitle: UIStackView

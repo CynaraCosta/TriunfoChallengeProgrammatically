@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let popularLabel = UILabel()
         popularLabel.textColor = .white
         popularLabel.text = "Popular"
-        popularLabel.font = UIFont(name: "Helvetica Neue", size: 28)
+        popularLabel.font = UIFont(name: "Quicksand-Medium", size: 25)
         // popularLabel.font = UIFont(name: "Nunito-ExtraBold", size: 25)
         return popularLabel
     }()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let seeAllButton = UIButton()
         seeAllButton.frame = CGRect(x: 0, y: 0, width: 69, height: 42)
         seeAllButton.setTitle("See all", for: .normal)
-        seeAllButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 17)
+        seeAllButton.titleLabel?.font = UIFont(name: "Quicksand-Medium", size: 16)
         seeAllButton.setTitleColor(UIColor.white, for: .normal)
         seeAllButton.backgroundColor = .clear
         return seeAllButton

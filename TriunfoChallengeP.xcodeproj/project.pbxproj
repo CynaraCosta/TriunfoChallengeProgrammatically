@@ -18,6 +18,10 @@
 		A4ED4D072875A74B00481812 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4D062875A74B00481812 /* SearchViewController.swift */; };
 		A4ED4D0B287635AF00481812 /* FeaturedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4D0A287635AF00481812 /* FeaturedCollectionViewController.swift */; };
 		A4ED4D0F2877176000481812 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4D0E2877176000481812 /* UIViewControllerExtension.swift */; };
+		A4ED4D1228771C9F00481812 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D1128771C9F00481812 /* Oswald-Medium.ttf */; };
+		A4ED4D1428771CF100481812 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D1328771CF100481812 /* Quicksand-Medium.ttf */; };
+		A4ED4D1628771CFC00481812 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D1528771CFC00481812 /* Quicksand-Regular.ttf */; };
+		A4ED4D182877203500481812 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D172877203500481812 /* Oswald-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		A4ED4D062875A74B00481812 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A4ED4D0A287635AF00481812 /* FeaturedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewController.swift; sourceTree = "<group>"; };
 		A4ED4D0E2877176000481812 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		A4ED4D1128771C9F00481812 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		A4ED4D1328771CF100481812 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		A4ED4D1528771CFC00481812 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		A4ED4D172877203500481812 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		A4ED4CEB287504CC00481812 /* TriunfoChallengeP */ = {
 			isa = PBXGroup;
 			children = (
+				A4ED4D1028771C6600481812 /* Fonts */,
 				A4ED4D0E2877176000481812 /* UIViewControllerExtension.swift */,
 				A4ED4D0A287635AF00481812 /* FeaturedCollectionViewController.swift */,
 				A4ED4D062875A74B00481812 /* SearchViewController.swift */,
@@ -80,6 +89,17 @@
 				A4ED4D00287505A300481812 /* TabBar.swift */,
 			);
 			path = TriunfoChallengeP;
+			sourceTree = "<group>";
+		};
+		A4ED4D1028771C6600481812 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4D172877203500481812 /* Oswald-Regular.ttf */,
+				A4ED4D1328771CF100481812 /* Quicksand-Medium.ttf */,
+				A4ED4D1128771C9F00481812 /* Oswald-Medium.ttf */,
+				A4ED4D1528771CFC00481812 /* Quicksand-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4ED4CF9287504CD00481812 /* LaunchScreen.storyboard in Resources */,
+				A4ED4D1628771CFC00481812 /* Quicksand-Regular.ttf in Resources */,
+				A4ED4D1228771C9F00481812 /* Oswald-Medium.ttf in Resources */,
+				A4ED4D182877203500481812 /* Oswald-Regular.ttf in Resources */,
 				A4ED4CF6287504CD00481812 /* Assets.xcassets in Resources */,
 				A4ED4CF4287504CC00481812 /* Main.storyboard in Resources */,
+				A4ED4D1428771CF100481812 /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

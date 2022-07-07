@@ -13,7 +13,7 @@ class TabBar: UITabBarController {
         let stackTitle = UIStackView()
         stackTitle.axis = NSLayoutConstraint.Axis.horizontal
         stackTitle.distribution  = UIStackView.Distribution.equalSpacing
-        //stackTitle.alignment = UIStackView.Alignment.center
+        stackTitle.alignment = UIStackView.Alignment.center
         stackTitle.spacing  = 4.0
         return stackTitle
     }()
@@ -33,7 +33,9 @@ class TabBar: UITabBarController {
         } else {
             rootViewController.navigationItem.title = title
         }
-        navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Oswald-Regular", size: 48)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        //navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
         return navController
       }
     
