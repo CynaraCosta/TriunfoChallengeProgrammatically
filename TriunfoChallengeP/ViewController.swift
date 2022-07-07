@@ -48,9 +48,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
         let gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
-        gradient.colors = [UIColor(named: "secondBlack")?.cgColor, UIColor(named: "purple")?.cgColor]
+        gradient.colors = [UIColor(named: "purple1")?.cgColor, UIColor(named: "purple2")?.cgColor]
         
         stackPopular.addArrangedSubview(popularLabel)
         stackPopular.addArrangedSubview(seeAllButton)

@@ -12,7 +12,7 @@ extension UIViewController{
     
     func teste() -> (UIImageView, UILabel, UIStackView){
         let logoImage: UIImageView
-        let image = UIImage(named: "logoLudi")
+        let image = UIImage(named: "logo")
         logoImage = UIImageView(image: image)
         logoImage.contentMode = .scaleAspectFit
 
@@ -29,7 +29,7 @@ extension UIViewController{
         stackTitle.axis = NSLayoutConstraint.Axis.horizontal
         stackTitle.distribution  = UIStackView.Distribution.equalSpacing
         //stackTitle.alignment = UIStackView.Alignment.center
-        stackTitle.spacing  = 4.0
+        stackTitle.spacing  = 8.0
         
         return (logoImage, titleLudi, stackTitle)
     }

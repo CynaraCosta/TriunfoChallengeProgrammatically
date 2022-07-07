@@ -14,7 +14,7 @@ class TabBar: UITabBarController {
         stackTitle.axis = NSLayoutConstraint.Axis.horizontal
         stackTitle.distribution  = UIStackView.Distribution.equalSpacing
         stackTitle.alignment = UIStackView.Alignment.center
-        stackTitle.spacing  = 4.0
+        stackTitle.spacing  = 8.0
         return stackTitle
     }()
     
@@ -25,11 +25,11 @@ class TabBar: UITabBarController {
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
         
-        //navController.navigationBar.barTintColor = UIColor(named: "secondBlack")
+        //navController.navigationBar.barTintColor = UIColor(named: "secondBlack")?.withAlphaComponent(0.5)
         
         navController.navigationBar.barTintColor = .clear
         navController.navigationBar.isTranslucent = true
-        
+                
         navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
                 
         navController.navigationBar.prefersLargeTitles = true
