@@ -12,9 +12,10 @@ class ViewController: UIViewController {
     let scrollView = UIScrollView()
     let contentView = UIView()
     
+    
     private let popularLabel: UILabel = {
         let popularLabel = UILabel()
-        popularLabel.textColor = .label
+        popularLabel.textColor = .white
         popularLabel.text = "Popular"
         popularLabel.font = UIFont(name: "Helvetica Neue", size: 28)
         // popularLabel.font = UIFont(name: "Nunito-ExtraBold", size: 25)
@@ -26,8 +27,8 @@ class ViewController: UIViewController {
         seeAllButton.frame = CGRect(x: 0, y: 0, width: 69, height: 42)
         seeAllButton.setTitle("See all", for: .normal)
         seeAllButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 17)
-        seeAllButton.setTitleColor(UIColor(named: "vermelho"), for: .normal)
-        seeAllButton.backgroundColor = .systemBackground
+        seeAllButton.setTitleColor(UIColor.white, for: .normal)
+        seeAllButton.backgroundColor = .clear
         return seeAllButton
     }()
     
@@ -47,10 +48,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        let gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [UIColor(named: "secondBlack")?.cgColor, UIColor(named: "purple")?.cgColor]
         
         stackPopular.addArrangedSubview(popularLabel)
         stackPopular.addArrangedSubview(seeAllButton)
         
+        self.view.layer.insertSublayer(gradient, at: 0)
         self.view.addSubview(scrollView)
         contentView.addSubview(stackPopular)
         scrollView.addSubview(contentView)
