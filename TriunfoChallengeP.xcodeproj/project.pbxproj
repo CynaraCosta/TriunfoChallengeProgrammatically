@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1BC9B6898671165CF38384 /* Pods_TriunfoChallengeP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D75D5080E745D99FAD519C1 /* Pods_TriunfoChallengeP.framework */; };
 		A4ED4CED287504CC00481812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4CEC287504CC00481812 /* AppDelegate.swift */; };
 		A4ED4CEF287504CC00481812 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4CEE287504CC00481812 /* SceneDelegate.swift */; };
 		A4ED4CF1287504CC00481812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4CF0287504CC00481812 /* ViewController.swift */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0300A574FD802F5D61AF4C88 /* Pods-TriunfoChallengeP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriunfoChallengeP.release.xcconfig"; path = "Target Support Files/Pods-TriunfoChallengeP/Pods-TriunfoChallengeP.release.xcconfig"; sourceTree = "<group>"; };
+		2DB4D0F6744AEF44A6A65964 /* Pods-TriunfoChallengeP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriunfoChallengeP.debug.xcconfig"; path = "Target Support Files/Pods-TriunfoChallengeP/Pods-TriunfoChallengeP.debug.xcconfig"; sourceTree = "<group>"; };
+		9D75D5080E745D99FAD519C1 /* Pods_TriunfoChallengeP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriunfoChallengeP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ED4CE9287504CC00481812 /* TriunfoChallengeP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriunfoChallengeP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ED4CEC287504CC00481812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4ED4CEE287504CC00481812 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,17 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1BC9B6898671165CF38384 /* Pods_TriunfoChallengeP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52EBD7599774A72AEF7C9B37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4D0F6744AEF44A6A65964 /* Pods-TriunfoChallengeP.debug.xcconfig */,
+				0300A574FD802F5D61AF4C88 /* Pods-TriunfoChallengeP.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A4ED4CE0287504CC00481812 = {
 			isa = PBXGroup;
 			children = (
 				A4ED4CEB287504CC00481812 /* TriunfoChallengeP */,
 				A4ED4CEA287504CC00481812 /* Products */,
+				52EBD7599774A72AEF7C9B37 /* Pods */,
+				ADBF5206F3C844042F4AEFE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +119,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		ADBF5206F3C844042F4AEFE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D75D5080E745D99FAD519C1 /* Pods_TriunfoChallengeP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4ED4CFD287504CD00481812 /* Build configuration list for PBXNativeTarget "TriunfoChallengeP" */;
 			buildPhases = (
+				7AE477040582D66D93ABD64F /* [CP] Check Pods Manifest.lock */,
 				A4ED4CE5287504CC00481812 /* Sources */,
 				A4ED4CE6287504CC00481812 /* Frameworks */,
 				A4ED4CE7287504CC00481812 /* Resources */,
+				0C4663828E47AC405E5CDC0E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C4663828E47AC405E5CDC0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TriunfoChallengeP/Pods-TriunfoChallengeP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TriunfoChallengeP/Pods-TriunfoChallengeP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TriunfoChallengeP/Pods-TriunfoChallengeP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AE477040582D66D93ABD64F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TriunfoChallengeP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4ED4CE5287504CC00481812 /* Sources */ = {
@@ -326,6 +395,7 @@
 		};
 		A4ED4CFE287504CD00481812 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DB4D0F6744AEF44A6A65964 /* Pods-TriunfoChallengeP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,6 +423,7 @@
 		};
 		A4ED4CFF287504CD00481812 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0300A574FD802F5D61AF4C88 /* Pods-TriunfoChallengeP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

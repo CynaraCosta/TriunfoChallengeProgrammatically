@@ -1,0 +1,6 @@
+framework module Pods_TriunfoChallengeP {
+  umbrella header "Pods-TriunfoChallengeP-umbrella.h"
+
+  export *
+  module * { export * }
+}
