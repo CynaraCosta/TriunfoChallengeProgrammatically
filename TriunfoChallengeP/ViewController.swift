@@ -7,11 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let scrollView = UIScrollView()
     let contentView = UIView()
     
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
+        tableView.backgroundColor = .clear
+        return tableView
+    }()
     
     private let popularLabel: UILabel = {
         let popularLabel = UILabel()
@@ -45,6 +51,22 @@ class ViewController: UIViewController {
        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+300)
     }
     
+    private let viewModels: [CollectionTableViewCellViewModel] = [
+        CollectionTableViewCellViewModel(
+        viewModels: [
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemRed),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemBlue),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemCyan),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemMint),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemPink),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemGreen),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemBrown),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemYellow),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemPurple),
+        ])
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -58,7 +80,13 @@ class ViewController: UIViewController {
         
         self.view.layer.insertSublayer(gradient, at: 0)
         self.view.addSubview(scrollView)
+        
         contentView.addSubview(stackPopular)
+        scrollView.addSubview(tableView)
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         scrollView.addSubview(contentView)
         
         // Autolayout
@@ -99,6 +127,37 @@ class ViewController: UIViewController {
             seeAllButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
             seeAllButton.centerYAnchor.constraint(equalTo: stackPopular.centerYAnchor),
         ])
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: stackPopular.bottomAnchor, constant: 20),
+            tableView.leadingAnchor.constraint(equalTo: stackPopular.leadingAnchor, constant: 8),
+            tableView.trailingAnchor.constraint(equalTo: stackPopular.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 540),
+        ])
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewModel = viewModels[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell else {
+            fatalError()
+        }
+        cell.configure(with: viewModel)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140 
     }
 }
 

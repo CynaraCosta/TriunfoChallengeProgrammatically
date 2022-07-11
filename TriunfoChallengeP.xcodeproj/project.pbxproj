@@ -23,6 +23,8 @@
 		A4ED4D1428771CF100481812 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D1328771CF100481812 /* Quicksand-Medium.ttf */; };
 		A4ED4D1628771CFC00481812 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D1528771CFC00481812 /* Quicksand-Regular.ttf */; };
 		A4ED4D182877203500481812 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4D172877203500481812 /* Oswald-Regular.ttf */; };
+		A4ED4D2C287CAADE00481812 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4D2B287CAADE00481812 /* CollectionTableViewCell.swift */; };
+		A4ED4D2E287CAC9100481812 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4D2D287CAC9100481812 /* TileCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		A4ED4D1328771CF100481812 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		A4ED4D1528771CFC00481812 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		A4ED4D172877203500481812 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		A4ED4D2B287CAADE00481812 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		A4ED4D2D287CAC9100481812 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,6 @@
 				2DB4D0F6744AEF44A6A65964 /* Pods-TriunfoChallengeP.debug.xcconfig */,
 				0300A574FD802F5D61AF4C88 /* Pods-TriunfoChallengeP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +107,8 @@
 				A4ED4CF7287504CD00481812 /* LaunchScreen.storyboard */,
 				A4ED4CFA287504CD00481812 /* Info.plist */,
 				A4ED4D00287505A300481812 /* TabBar.swift */,
+				A4ED4D2B287CAADE00481812 /* CollectionTableViewCell.swift */,
+				A4ED4D2D287CAC9100481812 /* TileCollectionViewCell.swift */,
 			);
 			path = TriunfoChallengeP;
 			sourceTree = "<group>";
@@ -252,7 +257,9 @@
 				A4ED4D052875A6F200481812 /* TrendingViewController.swift in Sources */,
 				A4ED4D0F2877176000481812 /* UIViewControllerExtension.swift in Sources */,
 				A4ED4CED287504CC00481812 /* AppDelegate.swift in Sources */,
+				A4ED4D2E287CAC9100481812 /* TileCollectionViewCell.swift in Sources */,
 				A4ED4D0B287635AF00481812 /* FeaturedCollectionViewController.swift in Sources */,
+				A4ED4D2C287CAADE00481812 /* CollectionTableViewCell.swift in Sources */,
 				A4ED4CEF287504CC00481812 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
