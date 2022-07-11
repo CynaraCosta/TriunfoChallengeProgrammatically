@@ -54,16 +54,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private let viewModels: [CollectionTableViewCellViewModel] = [
         CollectionTableViewCellViewModel(
         viewModels: [
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemRed),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemBlue),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemCyan),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemMint),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemPink),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemGreen),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemBrown),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemYellow),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "Título do filme", backgroundColor: .systemPurple),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
+            TileCollectionViewCellViewModel(name: "Título do filme", image: "fotinha"),
         ])
     ]
     

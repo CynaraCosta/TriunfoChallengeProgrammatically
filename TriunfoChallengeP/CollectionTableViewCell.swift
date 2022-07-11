@@ -21,12 +21,14 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: layout)
         
         collectionView.register(TileCollectionViewCell.self, forCellWithReuseIdentifier: "TileCollectionViewCell")
         collectionView.backgroundColor = .clear
+        
         
         return collectionView
     }()
@@ -36,6 +38,8 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(collectionView)
+        contentView.backgroundColor = .clear
+
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
@@ -62,6 +66,10 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TileCollectionViewCell.identifier, for: indexPath) as? TileCollectionViewCell else {
             fatalError()
         }
+        cell.contentView.backgroundColor = .clear
+        cell.backgroundColor = .clear
+        cell.backgroundView = nil
+        cell.backgroundView?.backgroundColor = .clear
         cell.configure(with: viewModels[indexPath.row])
         
         return cell
@@ -77,5 +85,5 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         let height: CGFloat = 140
         return CGSize(width: width, height: height)
     }
-
+    
 }
